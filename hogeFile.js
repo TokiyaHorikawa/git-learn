@@ -1,5 +1,5 @@
-function t_test() {
-  console.log("this is Test')
+function hogehoge() {
+  console.log("this is Test hoge')
 }
 
-t_test()
+hogehoge()
