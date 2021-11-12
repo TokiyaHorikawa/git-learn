@@ -1,5 +1,5 @@
-function test() {
-  console.log("this is Test')
+function hogehoge() {
+  console.log("this is Test hoge')
 }
 
-test()
+hogehoge()
