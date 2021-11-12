@@ -2,4 +2,10 @@ function hogehoge() {
   console.log("this is Test hoge')
 }
 
-hogehoge()
+const data = hogehoge()
+
+const fn = () => {
+ return hogehoge()
+}
+
+fn()
