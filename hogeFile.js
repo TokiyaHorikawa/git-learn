@@ -8,5 +8,4 @@ const fn = () => {
  return hogehoge()
 }
 
-// コミットの改行テスト
 fn()
