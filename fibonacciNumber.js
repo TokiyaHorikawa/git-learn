@@ -10,11 +10,8 @@ function fib(n) {
   }
   return fib(n - 1) + fib(n - 2);
 }
-// console.time("loop");
-// console.log(fib(44));
-// console.timeEnd("loop");
 
-function reFib(n) {
+function quickFib(n) {
   let a = 1;
   let b = 1;
   for (let i = 3; i <= n; i++) {
@@ -25,6 +22,18 @@ function reFib(n) {
   return b;
 }
 
-console.time("loop");
-console.log(reFib(77));
-console.timeEnd("loop");
+// メモ化
+function memoFib(n, memo = []) {
+  if (n < 3) return 1;
+  if (memo[n]) return memo[n];
+  memo[n] = memoFib(n - 1, memo) + memoFib(n - 2, memo);
+  return memo[n];
+}
+const input = 100;
+console.time("quickFib");
+console.log(quickFib(input));
+console.timeEnd("quickFib");
+
+console.time("memoFib");
+console.log(memoFib(input));
+console.timeEnd("memoFib");
