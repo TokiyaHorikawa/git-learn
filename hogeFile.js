@@ -1,13 +1,16 @@
-function hogehoge() {
-  console.log("this is Test hoge')
+class Human {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  hello() {
+    console.log("Hello, I'm " + this.name);
+  }
 }
 
-const data = hogehoge()
+const taro = new Human("Taro", 30);
+const hanako = new Human("Hanako", 20);
 
-const fn = () => {
- return hogehoge()
-}
-
-// 伝説の何か
-// 変更
-fn()
+taro.hello();
+hanako.hello();
